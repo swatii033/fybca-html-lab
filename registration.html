@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <H1> Student registration form </H1>
+
+<form action="/sumbitform.php" method="post">
+    <label for="tusername">
+        USER NAME:
+    <input type="text" name="tusername" placeholder="Enter your username" STEP="color:rgb(109,62,4);">
+    </label>
+    <br>
+    <label for="tpassword"><br>
+        PASSWORD:
+    <input type="password" name="tpassword" placeholder="Enter your password" style="color: rgb(109, 62, 4);">
+    </label>
+    <BR>
+   <label for="temail"><br>
+        EMAIL:
+    <input type="email" name="temail" placeholder="Enter your email" style="color: rgb(109, 62, 4);">
+    </label>
+    <BR>
+    <label for="age"><br>
+        AGE: 
+    <input type="age" name="tage" placeholder="Enter you age" style="color: rgb(109, 62, 4);">
+    </label>
+    <BR>
+    <form action="/action_page.php"><br>
+    <label for="birthdaytime">
+        DATE OF BIRTH:
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+    </label>
+    <BR>
+<table>
+    <tr>
+      <td>GENDER :</td>
+      <TD>
+          <label for="101"><input type="radio" name="rgender" value="male" id="101">Male </label> 
+          <label for="102"><input type="radio" name="rgender" value="female" id="102">Female </label> 
+      </TD>
+    </tr>
+    <TR>
+        <td>INTERESTS :</td>
+        <TD><br>
+          <label for="103"><input type="checkbox" name="chkinterest" value="coding" id="103">Coding </label> 
+          <label for="104"><input type="checkbox" name="chkinterest" value="music" id="104">Music </label> 
+        </TD>
+    </TR>
+</table>
+<label for="tcountry"><br>
+    COUNTRY:
+    <select autocomplete="country" id="country" name="country">
+        <option>select country</option>
+        <option value="AF">Afghanistan</option>
+        <option value="IN">India</option>
+        <option value="GR">Germany</option>
+        <option value="GR">USA</option>
+    </label>>
+    </select>
+</label>
+    <br>
+    <tr>
+    
+<Label for="txtBio"><br>
+         BIO:
+        <textarea name="txtBio" rows="4" cols="40"></textarea>
+</label>
+<label for="ddColor"><BR>
+    FAVOURITE COLOR: 
+    <input type="color" name="ddColor">
+</label>
+
+<br><br>
+<label for="">  
+   EXPERIENCE(Years): 
+    <input type="range">
+</label>
+
+<br><br><br>
+<input type="submit" name="btnSubmit" value="Submit">
+
+
+</form>
+
+    
+</body>
+</html>
