@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script type="text/javascript">
+
+function calculate()
+{
+
+    //Get the values from text boxes here
+    var numA = document.getElementById("txtA").value;
+    var numB = document.getElementById("txtB").value;
+
+    //Do the calculations here
+    var sum = numA + numB;
+    var sub = numA - numB;
+    var mul = numA * numB;
+    var divn = numA / numB;
+
+
+    result = "Addition = " + sum + "<br>Subtraction = " + sub + "<br>Multiplication = "+ mul + "<br>Division = " + divn;
+
+    //Display values here
+
+    document.getElementById("dv_calculation").innerHTML = result;
+
+}
+
+</script>
+
+</head>
+        <h1>simple calculator     </h1>
+<body style="background-color: rgb(106, 95, 116);">
+   
+
+
+A = <input type="number" placeholder="Enter A" id="txtA">
+<br>
+
+B = <input type="number" placeholder="Enter B" id="txtB">
+
+<br>
+
+<input type="button" onclick="calculate()" value="Calculate">
+
+<h2>Calculations</h2>
+<div id="dv_calculation" style="padding: 10; background-color: beige;font-size: larger;">
+&nbsp;
+</div>
+
+
+
+
+</body>
+</html>
