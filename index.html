@@ -1,0 +1,137 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function Validateform()
+        {
+            alert("Validateion Started");
+
+            var name = document.getElementById("name").value ;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            var gender = document.getElementsByName("gender");
+            var hobbies = document.getElementsByName("hobby");
+
+            //alert(name + " " + age + " " + email + " " + password + " " + confirmPassword + " " + gender + " " + hobbies);
+
+            if(name=="")
+            {
+                alert("Please enter name");
+                return false;
+            }
+            if(name.length <3)
+            {
+                alert("Please enter atleast three charachters");
+                return false;
+            }
+
+                    // Age validation
+            if (age == "" || isNaN(age)) {
+                alert("Enter a valid age");
+                return false;
+            }
+
+            if (age < 18 || age > 60) {
+                alert("Age must be between 18 and 60");
+                return false;
+            }
+
+            // Email validation
+            if (email == "") {
+                alert("Email is required");
+                return false;
+            }
+
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            // Password validation
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            // Confirm password validation
+            if (password != confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            // Gender validation
+            var genderSelected = false;
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    genderSelected = true;
+                }
+            }
+
+            if (!genderSelected) {
+                alert("Please select gender");
+                return false;
+            }
+
+            // Hobby validation
+            var hobbySelected = false;
+            for (var i = 0; i < hobbies.length; i++) {
+                if (hobbies[i].checked) {
+                    hobbySelected = true;
+                }
+            }
+
+            if (!hobbySelected) {
+                alert("Select at least one hobby");
+                return false;
+            }
+
+            alert("Registration Successful");
+
+
+            return true;
+        }
+
+
+    </script>
+
+
+</head>
+<body style="background-color: rgb(167, 151, 127);">
+   
+    <h1> Form Validation Using Javascript</h1>
+    <form onsubmit="return Validateform()">
+
+    Name:
+    <input type="text" id="name"><br><br>
+     Age:
+    <input type="text" id="age"><br><br>
+    Email:
+    <input type="text" id="email"><br><br>
+    Password:
+    <input type="password" id="password"><br><br>
+    Confirm Password:
+    <input type="password" id="confirmPassword"><br><br>
+    Gender:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+Hobbies:
+    <input type="checkbox" name="hobby"> Reading
+    <input type="checkbox" name="hobby"> Sports
+    <input type="checkbox" name="hobby"> Music
+    <br><br>
+
+    <input type="submit" value="Register">
+
+    </form>
+
+
+</body>
+</html>
